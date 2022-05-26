@@ -9,10 +9,10 @@
     <meta name="author" content="cho hwanjoon">
 
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://yellrim.github.io/paikdabang/images/og.jpg">
+    <meta property="og:image" content="https://pam7464.github.io/paikdabang/images/og.jpg">
     <meta property="og:title" content="빽다방">
     <meta property="og:description" content="여기를 눌러 링크를 확인하세요">
-    <meta property="og:url" content="https://yellrim.github.io/paikdabang/">
+    <meta property="og:url" content="https://pam7464.github.io/paikdabang/">
 
     <!-- <meta name="twitter:card" content="summary"> -->
     <!-- <meta name="twitter:site" content="@paikscoffee"> -->
@@ -21,13 +21,16 @@
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bxslider -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" integrity="sha512-UBY4KATrDAEKgEEU+RAfY4yWrK0ah43NGwNr5o/xmncxsT+rv8jp7MI3a00I0Ep3NbAx05U5kw3DvyNCoz+Wcw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>빽다방</title>
-    <link rel="stylesheet" href="./css/mobile.min.css">
-    <link rel="stylesheet" href="./css/tablet.min.css">
-    <link rel="stylesheet" href="./css/desktop.min.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/index.css">    
     
+    <style>
+               
+    </style>
 </head>
 <body>
     <section class="skip-menu">
@@ -35,7 +38,57 @@
         <a href="#">메뉴2</a>
         <a href="#">메뉴3</a>
     </section>
-
+    <section class="popup-par" style="display:none;">
+        <section class="popup">
+            <div class="btn-close"></div>
+            <div class="popup-main">
+                <div class="img-box">
+                    <a href="#">
+                        <img src="./images/mmain-banner01.jpg" alt="콜드블루">
+                    </a>
+                </div>
+            </div>
+            <div class="chk-box">
+                <label>
+                    <input type="checkbox">
+                    24시간 열지 않음
+                </label>
+            </div>
+        </section>
+    </section>
+    <div class="login" style="position:fixed;left:0;right:0;top:0;bottom:0;z-index:10001;">
+        <form>
+            <h2>
+                <i class="fas fa-sign-in-alt"></i>
+                ID 로그인
+            </h2>
+            <div class="input01">
+                <i class="far fa-user"></i>
+                <input type="text" id="user-id" placeholder="아이디">
+            </div>
+            <div class="input02">
+                <i class="fas fa-unlock-alt"></i>
+                <input type="password" id="user-pass" placeholder="패스워드">
+            </div>
+            <div class="input05">
+                <label>
+                    <input type="checkbox" id="save-id">
+                    <div class="chk-id">
+                        <div class="line01"></div>
+                        <div class="line02"></div>
+                    </div>
+                    ID 저장
+                </label>
+            </div> 
+            <div class="input03">
+                <input type="submit" value="로그인" id="btn-send">
+            </div>
+            <div class="input04">
+                <input type="reset" value="취소" id="btn-reset">
+            </div>
+                       
+        </form>
+    </div>
     <section class="wrap">
         <header class="header">
             <div class="container">
@@ -45,6 +98,7 @@
                     </div>
                     <div class="h-right">
                         <ul class="sm-nav">
+                            <li><a href="#" id="btn-login">로그인</a></li>
                             <li><a href="#">더본코리아</a></li>
                             <li><a href="#">매장찾기</a></li>
                             <li class="ico-sns"><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -60,7 +114,7 @@
                                 <li>
                                     <a href="#">빽다방</a>
                                     <ul class="sub-nav">
-                                        <li><a href="#">ceo 인사말</a></li>
+                                        <li><a href="./paik-info.html">ceo 인사말</a></li>
                                         <li><a href="#">빽다방 소개</a></li>
                                         <li><a href="#">커피이야기</a></li>
                                     </ul>
@@ -68,7 +122,7 @@
                                 <li>
                                     <a href="#">메뉴</a>
                                     <ul class="sub-nav">
-                                        <li><a href="#">신메뉴</a></li>
+                                        <li><a href="./menu.html">신메뉴</a></li>
                                         <li><a href="#">커피</a></li>
                                         <li><a href="#">음료</a></li>
                                         <li><a href="#">아이스크림/디저트</a></li>
@@ -78,7 +132,7 @@
                                 <li>
                                     <a href="#">소식</a>
                                     <ul class="sub-nav">
-                                        <li><a href="#">소식</a></li>
+                                        <li><a href="./notice.html">소식</a></li>
                                         <li><a href="#">이벤트</a></li>
                                         <li><a href="#">친절 우수매장</a></li>                                    
                                     </ul>
@@ -391,10 +445,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- bxslider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" integrity="sha512-p55Bpm5gf7tvTsmkwyszUe4oVMwxJMoff7Jq3J/oHaBk+tNQvDKNz9/gLxn9vyCjgd6SAoqLnL13fnuZzCYAUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/rsp-menu.min.js"></script>
     <script src="./js/f-site.min.js"></script>
-    <script>         
-        $('.slider').bxSlider();
-    </script>
+    <script src="./js/rsp-menu.min.js"></script>
+    <script src="./js/js.js"></script>
+
 </body>
 </html>
